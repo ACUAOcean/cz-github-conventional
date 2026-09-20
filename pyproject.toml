@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cz-github-conventional"
+version = "1.0.0"
+description = "Commitizen plugin: conventional commits with GitHub issue references, every commit type bumps at least patch."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Callum Shipton" }]
+requires-python = ">=3.9"
+dependencies = ["commitizen>=4.7.2,<5"]
+
+[project.urls]
+Homepage = "https://github.com/ACUAOcean/cz-github-conventional"
+
+[project.entry-points."commitizen.plugin"]
+cz_github_conventional = "cz_github_conventional:GithubConventionalCz"
+
+[tool.setuptools]
+py-modules = ["cz_github_conventional"]
